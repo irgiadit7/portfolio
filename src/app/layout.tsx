@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://portofolio-irgi.vercel.app/"),
   openGraph: {
-    title: "Irgi Adit Pratama | Founder & Software Engineer",
+    title: "Irgi Adit Pratama | Portfolio",
     description:
       "Founder of SolvinMe and Software Engineer specializing in scalable systems and database architecture. Building products that solve real startup problems from day zero.",
     url: "/",
@@ -61,10 +61,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Irgi Adit Pratama | Founder & Software Engineer",
+    title: "Irgi Adit Pratama | Portfolio",
     description:
       "Founder of SolvinMe. Software Engineer specializing in scalable systems and database architecture.",
-    images: ["/assets/nasa-unsplash.webp"],
+    images: ["/assets/coding-pov.png"],
   },
   robots: {
     index: true,

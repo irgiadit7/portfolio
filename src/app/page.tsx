@@ -11,9 +11,10 @@ const Footer = dynamic(() => import("../../sections/Footer"), { ssr: true });
 
 const App = () => {
   return (
-    <main className="container mx-auto max-w-7xl">
+    <>
       <Navbar />
       <Hero />
+    <main className="container mx-auto max-w-7xl">
       <About />
       <Experiences />
       <Projects />
@@ -21,6 +22,7 @@ const App = () => {
       <Contact />
       <Footer/>
     </main>
+    </>
   );
 };
 
