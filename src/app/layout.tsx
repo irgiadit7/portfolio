@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Irgi Adit Pratama",
     images: [
       {
-        url: "/assets/nasa-unsplash.webp",
+        url: "/assets/coding-pov.png",
         width: 1200,
         height: 630,
         alt: "Irgi Adit Pratama — Founder & Software Engineer",
