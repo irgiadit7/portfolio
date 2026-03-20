@@ -1,18 +1,10 @@
 import { motion } from "motion/react";
 
-
-interface Tag {
-  id: number;
-  name: string;
-  path: string;
-}
-
 interface ProjectDetailsProps {
   title: string;
   description: string;
   subDescription: string[];
   image: string;
-  tags: Tag[];
   href: string;
   closeModal: () => void;
 }
@@ -22,7 +14,6 @@ const ProjectDetails = ({
   description,
   subDescription,
   image,
-  tags,
   href,
   closeModal,
 }: ProjectDetailsProps) => {
@@ -35,35 +26,29 @@ const ProjectDetails = ({
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-full top-5 cursor-pointer right-5 bg-midnight hover:bg-gray-500"
+          className="absolute p-2 rounded-full top-5 right-5 cursor-pointer bg-midnight hover:bg-gray-500"
         >
-          <img src="assets/close.svg" className="w-6 h-6" />
+          <img src="assets/close.svg" className="w-6 h-6" alt="close" />
         </button>
+
         <img src={image} alt={title} className="w-full rounded-t-2xl" />
+
         <div className="p-5">
           <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
           <p className="mb-3 font-normal text-neutral-400">{description}</p>
           {subDescription.map((subDesc, index) => (
-            <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
+            <p key={index} className="mb-3 font-normal text-neutral-400">
+              {subDesc}
+            </p>
           ))}
-          <div className="flex flex-col gap-5 mt-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap gap-3">
-              {tags.map((tag) => (
-                <img
-                  key={tag.id}
-                  src={tag.path}
-                  alt={tag.name}
-                  className="rounded-lg size-10 hover-animation"
-                />
-              ))}
-            </div>
+          <div className="flex justify-end mt-6">
             <a
               href={href}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
             >
-              View Project <img src="assets/arrow-up.svg" className="size-4" />
+              View Project <img src="assets/arrow-up.svg" className="size-4" alt="arrow" />
             </a>
           </div>
         </div>

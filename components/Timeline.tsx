@@ -35,7 +35,7 @@ export const Timeline = ({ data }: TimelineProps) => {
 
   return (
     <div className="c-space section-spacing" ref={containerRef}>
-      <h2 className="text-heading">My Work Experience</h2>
+      <h2 className="text-heading">Work Experience</h2>
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (
           <div

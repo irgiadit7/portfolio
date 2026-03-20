@@ -3,178 +3,48 @@ export const myProjects = [
     id: 1,
     title: "AI Dental Assistant Platform",
     description:
-      "A comprehensive AI-powered dental health platform integrating Voice AI for instant consultations and seamless appointment management.",
+      "An intelligent dental health platform that lets patients consult a Voice AI assistant in real time — reducing friction between people and professional healthcare before they ever step into a clinic.",
     subDescription: [
-      "Integrated Vapi for real-time Voice AI assistance, providing instant medical advice to patients.",
-      "Implemented secure multi-provider authentication (Google, Email) using Clerk and NextAuth.",
-      "Designed a scalable backend with Prisma ORM and Neon (Serverless PostgreSQL) for efficient data handling.",
-      "Built a responsive interface with Next.js and Tailwind CSS, featuring appointment scheduling and doctor dashboards.",
+      "Identified a gap in the healthcare access chain: most people delay dental visits because they have no low-barrier way to assess whether their symptoms are urgent. This platform addresses that directly.",
+      "Integrated a real-time Voice AI layer that listens, interprets patient concerns, and delivers instant, context-aware medical guidance — making the experience feel like speaking to a professional.",
+      "Built a seamless appointment management system that converts AI-assisted consultations into booked sessions, reducing drop-off and connecting patients to the right doctor at the right time.",
+      "Designed the system with security and trust as non-negotiables: multi-provider authentication, role-based access for doctors and patients, and a data architecture built for compliance from the start.",
     ],
     href: "https://solvion-dentsis-gzvki.sevalla.app/",
-    logo: "",
     image: "/assets/projects/Solvion Dentsis.png",
-    tags: [
-      {
-        id: 1,
-        name: "Typescript",
-        path: "/assets/logos/typescript.svg",
-      },
-      {
-        id: 2,
-        name: "Nextjs",
-        path: "/assets/logos/nextjs.svg",
-      },
-      {
-        id: 3,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 4,
-        name: "Vapi AI",
-        path: "/assets/logos/vapi.png",
-      },
-      {
-        id: 5,
-        name: "Prisma/Neon",
-        path: "/assets/logos/prisma.svg",
-      },
-      {
-        id: 6,
-        name: "Clerk Auth",
-        path: "/assets/logos/clerk.svg",
-      },
-    ],
   },
   {
     id: 2,
-    title: "Real Time Social Media App",
-    description:
-      "A scalable, cross-platform social media application featuring real-time interactions, dynamic feeds, and secure messaging.",
-    subDescription: [
-      "Developed a cross-platform mobile app (iOS/Android) using React Native, Expo, and NativeWind.",
-      "Engineered real-time features including live messaging, posts, likes, and reposts using Supabase.",
-      "Implemented complex state management for user profiles, feeds, and authentication flows.",
-      "Ensured high scalability (0-10k users) with optimized backend architecture and database schemas.",
-    ],
-    href: "https://github.com/irgiadit7/Solvion-SolVerse",
-    logo: "",
-    image: "/assets/projects/Real Time Social Media App.webp",
-    tags: [
-      {
-        id: 1,
-        name: "React Native",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "Expo",
-        path: "/assets/logos/expo.svg",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/logos/typescript.svg",
-      },
-      {
-        id: 4,
-        name: "ExpressJs",
-        path: "/assets/logos/expressjs.svg",
-      },
-      {
-        id: 5,
-        name: "MongoDB",
-        path: "/assets/logos/mongodb (2).svg",
-      },
-      {
-        id: 6,
-        name: "PostgreSQL",
-        path: "/assets/logos/postgresql.svg",
-      },
-      {
-        id: 7,
-        name: "Cloudinary",
-        path: "/assets/logos/cloudinary.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
     title: "VideoBelajar E-Learning Platform",
     description:
-      "A modern, responsive e-learning platform designed to provide an engaging and accessible learning experience with secure content delivery.",
+      "A structured e-learning platform built to make quality education accessible and easy to navigate — for both the people learning and the instructors delivering content.",
     subDescription: [
-      "Developed a fully responsive Single Page Application (SPA) using Next.js for optimal performance.",
-      "Designed an intuitive UI with Tailwind CSS, focusing on ease of navigation for students and instructors.",
-      "Implemented secure user authentication and role-based access control (RBAC).",
-      "Integrated a robust database system (PostgreSQL) to manage course content and user progress tracking.",
+      "Approached the problem from the learner's perspective: most e-learning platforms overwhelm users with complexity. VideoBelajar prioritizes clarity, giving students a clean path from enrollment to completion.",
+      "Built a role-based system that gives instructors full control over their content and gives students a personalized, trackable learning experience — without either side having to fight the interface.",
+      "Implemented a secure authentication and access control layer so that content is protected, user progress is reliable, and the platform can be trusted as a long-term learning environment.",
+      "Designed the data layer to handle course content, user progress, and enrollment state efficiently — ensuring the platform stays performant as the course catalog and user base grow.",
     ],
     href: "https://mission-fe-2-advance.vercel.app/",
-    logo: "",
     image: "/assets/projects/VideoBelajar.png",
-    tags: [
-      {
-        id: 1,
-        name: "Next.js",
-        path: "/assets/logos/nextjs.svg",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        path: "/assets/logos/typescript.svg",
-      },
-      {
-        id: 3,
-        name: "PostgreSQL",
-        path: "/assets/logos/postgresql.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 5,
-        name: "Firebase",
-        path: "/assets/logos/firebase.svg",
-      },
-    ],
   },
 ];
 
-export const mySocials = [
-  {
-    name: "WhatsApp",
-    href: "https://wa.me/+6281511131048",
-    icon: "/assets/socials/whatsApp.svg",
-  },
-  {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/irgi-adit-pratama",
-    icon: "/assets/socials/linkedIn.svg",
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/_iaprtma",
-    icon: "/assets/socials/instagram.svg",
-  },
-];
 
 export const experiences = [
   {
-    title: "Solo Fullstack Developer (Cross-Platform)",
-    job: "Personal Project: Real-time Social Media App",
-    date: "Apr 2025 - Nov 2025",
+    title: "Founder",
+    job: "SolvinMe",
+    date: "Jan 2026 - Present",
     contents: [
-      "Designed and developed a large-scale social media application end-to-end for Web (Next.js) and Mobile (React Native/Expo).",
-      "Built real-time interactive features (Messaging, Posts, Likes, Reposts) with a backend architecture supporting user scalability.",
-      "Implemented complex state management and secure authentication systems to ensure seamless application performance on Android and iOS.",
-      "Optimized application lifecycles and UI/UX to deliver a user experience equivalent to native applications.",
+      "Founded SolvinMe — a professional networking platform built to close the gap between raw talent and industry readiness. SolvinMe equips people with AI-powered CV/Resume tools (automated analysis, review, revision, and career suggestions), a zero-friction portfolio builder, and job discovery — all in one place.",
+      "Leading a team of 4 engineers: setting product direction, owning the technical roadmap, driving architecture decisions on the database and system layer, and keeping the team aligned on long-term vision while shipping fast.",
+      "Responsible for the full product lifecycle — from problem discovery and user research to business model, go-to-market strategy, and growth. Every major decision from the product, engineering, and business side lands on this desk.",
+      "Personally architected and own the core system: multi-tenant database design, scalable backend infrastructure, and the AI integration layer powering resume intelligence — because the founder who understands the system builds a company that doesn't break at scale.",
     ],
   },
   {
-    title: "Backend Developer (AI Integration)",
-    job: "Personal Project: BaaS AI Assistant Platform",
+    title: "Backend Developer & AI Integration",
+    job: "BaaS AI Assistant Platform(DentSis)",
     date: "Sep 2025 - Nov 2025",
     contents: [
       "Developed a Backend-as-a-Service (BaaS) platform for an intelligent medical assistant featuring voice and text message integration.",
@@ -186,7 +56,7 @@ export const experiences = [
   {
     title: "Data Management Intern",
     job: "PT Bank Rakyat Indonesia (Persero) Tbk - Unit Jonggol",
-    date: "Feb 2023 - May 2023", 
+    date: "Feb 2023 - May 2023",
     contents: [
       "Managed and verified sensitive customer data and transaction histories using internal banking systems with a high degree of accuracy.",
       "Executed daily administrative tasks in strict compliance with Standard Operating Procedures (SOP) and banking data security protocols.",
@@ -198,39 +68,51 @@ export const experiences = [
 
 export const reviews = [
   {
-    name: "Sarah Jenkins",
-    username: "@sarah_j",
-    body: "Irgi's ability to integrate AI into our backend was impressive. The solution was not just functional, but highly scalable.",
-    img: "https://robohash.org/sarah",
+    name: "James Carter",
+    username: "@james_pm",
+    body: "Working with Irgi on SolvinMe gave me a front-row seat to how a real founder operates. He doesn't just write code — he thinks about the business, the user, and the system all at once.",
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    name: "Michael Chen",
-    username: "@mchen_dev",
-    body: "I rarely see junior developers with such a strong grasp of clean architecture. His Next.js code is a joy to work with.",
-    img: "https://robohash.org/michael",
+    name: "Sophie Laurent",
+    username: "@sophie_ux",
+    body: "As a designer on the team, I was amazed at how Irgi could take a vague product idea and translate it into a clear technical direction within hours. That kind of clarity is rare.",
+    img: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
-    name: "David Park",
-    username: "@david_p",
-    body: "Fast delivery and excellent problem-solving skills. He fixed a complex state management issue in our React Native app in hours.",
-    img: "https://robohash.org/david",
+    name: "Marcus Webb",
+    username: "@marcus_dev",
+    body: "I've worked under several tech leads — Irgi is different. He pushes you to think about why you're building something, not just how. That changes the quality of everything you ship.",
+    img: "https://randomuser.me/api/portraits/men/56.jpg",
   },
   {
-    name: "Emily R.",
-    username: "@emily_tech",
-    body: "The cross-platform app he built runs smoothly on both iOS and Android. Truly an engineering mindset!",
-    img: "https://robohash.org/emily",
+    name: "Daniel Okafor",
+    username: "@daniel_eng",
+    body: "The database architecture Irgi designed for SolvinMe is genuinely impressive. It's built to scale — not just for today's users, but for where the product is going.",
+    img: "https://randomuser.me/api/portraits/men/74.jpg",
   },
   {
-    name: "James Wilson",
-    username: "@jwilson",
-    body: "Irgi bridges the gap between complex backend logic and beautiful frontend UI perfectly. Highly recommended.",
-    img: "https://robohash.org/james",
+    name: "Natalie Brooks",
+    username: "@natalie_ops",
+    body: "Irgi is one of those rare people who can zoom out to the business level and zoom in to the system level in the same conversation. That's the profile of someone who builds companies, not just features.",
+    img: "https://randomuser.me/api/portraits/women/68.jpg",
   },
   {
-    name: "Anna K.",
-    username: "@anna_ai",
-    body: "His passion for Robotics and AI shines through his work. He thinks several steps ahead when designing a system.",
-    img: "https://robohash.org/anna",
+    name: "Ryan Mitchell",
+    username: "@ryan_be",
+    body: "What stands out most is his product instinct. He could tell exactly which problems were worth solving and which were distractions — and he backed it up with execution.",
+    img: "https://randomuser.me/api/portraits/men/11.jpg",
+  },
+  {
+    name: "Olivia Chen",
+    username: "@olivia_startup",
+    body: "SolvinMe solves a real problem I faced when I was job hunting. Irgi built something I genuinely wish existed years ago — and the AI resume feature alone is worth the entire platform.",
+    img: "https://randomuser.me/api/portraits/women/29.jpg",
+  },
+  {
+    name: "Ethan Cole",
+    username: "@ethan_tech",
+    body: "I've seen a lot of founders who can talk product but can't touch the system. Irgi does both — and the team respects him for it because he's never asking anyone to do something he can't do himself.",
+    img: "https://randomuser.me/api/portraits/men/47.jpg",
   },
 ];

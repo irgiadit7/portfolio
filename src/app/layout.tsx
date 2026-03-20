@@ -15,21 +15,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
+    default: "Irgi Adit Pratama | Founder & Software Engineer",
     template: "%s | Irgi Adit Pratama",
   },
   description:
-    "Portfolio of Irgi Adit Pratama, a Software Engineer focused on AI-Driven Product Innovation. Building scalable, intelligent solutions with Next.js, React Native, and Robotics.",
-     keywords: [
+    "Irgi Adit Pratama — Founder of SolvinMe and Software Engineer specializing in scalable systems, database architecture, and AI-driven products. Building infrastructure that lets startups grow from day zero.",
+  keywords: [
     "Irgi Adit Pratama",
+    "Founder SolvinMe",
     "Software Engineer",
-    "AI-Driven Product Innovation",
+    "Scalable Systems",
+    "Database Architecture",
     "Product Engineer",
-    "AI Engineer",
+    "AI Integration",
     "Fullstack Developer",
     "Next.js",
-    "React Native",
-    "Robotics",
+    "Startup Engineer",
     "Indonesia",
   ],
   authors: [{ name: "Irgi Adit Pratama", url: "https://github.com/irgiadit7" }],
@@ -40,19 +41,19 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://portofolio-irgi.vercel.app/"), 
+  metadataBase: new URL("https://portofolio-irgi.vercel.app/"),
   openGraph: {
-   title: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
+    title: "Irgi Adit Pratama | Founder & Software Engineer",
     description:
-      "Explore the portfolio of Irgi Adit Pratama, featuring engineering solutions in Web, Mobile, and AI-Driven Product Innovation.",
+      "Founder of SolvinMe and Software Engineer specializing in scalable systems and database architecture. Building products that solve real startup problems from day zero.",
     url: "/",
-    siteName: "Irgi Adit Pratama Portfolio",
+    siteName: "Irgi Adit Pratama",
     images: [
       {
-        url: "/assets/coding-pov.png",
+        url: "/assets/nasa-unsplash.webp",
         width: 1200,
         height: 630,
-        alt: "Irgi Adit Pratama Portfolio",
+        alt: "Irgi Adit Pratama — Founder & Software Engineer",
       },
     ],
     locale: "en_US",
@@ -60,10 +61,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Irgi Adit Pratama | Software Engineer & AI-Driven Product Innovation",
+    title: "Irgi Adit Pratama | Founder & Software Engineer",
     description:
-      "Software Engineer focused on AI-Driven Product Innovation and scalable systems.",
-    images: ["/assets/coding-pov.png"], 
+      "Founder of SolvinMe. Software Engineer specializing in scalable systems and database architecture.",
+    images: ["/assets/nasa-unsplash.webp"],
   },
   robots: {
     index: true,
@@ -86,12 +87,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className="scroll-smooth"> 
+return (
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white overflow-x-hidden`}
       >
-      <NextTopLoader 
+        <NextTopLoader
           color="#2299DD"
           initialPosition={0.08}
           crawlSpeed={200}

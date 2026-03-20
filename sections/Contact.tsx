@@ -1,136 +1,113 @@
 'use client'
 
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import Alert from "./../components/Alert";
-import { Particles } from "./../components/Particles";
+import { motion } from "motion/react";
+import { Linkedin, Instagram, Github, Mail, ArrowUpRight, Facebook } from "lucide-react";
+import { Particles } from "../components/Particles";
+
+const SOCIALS = [
+  { href: "https://www.linkedin.com/in/irgi-adit-pratama/", icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn"  },
+  { href: "https://github.com/irgiadit7",                   icon: <Github    className="w-5 h-5" />, label: "GitHub"    },
+  { href: "https://www.facebook.com/profile.php?id=61583691564375", icon: <Facebook className="w-5 h-5" />, label: "Facebook" },
+  { href: "https://www.instagram.com/_iaprtma",             icon: <Instagram className="w-5 h-5" />, label: "Instagram" },
+];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("success");
-  const [alertMessage, setAlertMessage] = useState("");
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const showAlertMessage = (type: string, message: string) => {
-    setAlertType(type);
-    setAlertMessage(message);
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      console.log("From submitted:", formData);
-      await emailjs.send(
-        "service_8pl9peh",
-        "template_r0wxlre",
-        {
-          from_name: formData.name,
-          to_name: "Irgi",
-          from_email: formData.email,
-          to_email: "irgiaditpratama@gmail.com",
-          message: formData.message,
-        },
-        "FICCtItsbEO8R1VsR"
-      );
-      setIsLoading(false);
-      setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "Your message has been sent!");
-    } catch (error) {
-      setIsLoading(false);
-      console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
-    }
-  };
-
   return (
-    <section id="contact" className="relative flex items-center c-space section-spacing">
-      <Particles
-        className="absolute inset-0 -z-50"
-        quantity={100}
-        ease={80}
-        color={"#ffffff"}
-        refresh
-      />
-      {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
-        <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let&apos;s Talk</h2>
-          <p className="font-normal text-neutral-400">
-            Whether you&apos;re loking to build a new software, improve your existing
-            platform, or bring a unique project to life, I&apos;m here to help
+    <section
+      id="contact"
+      className="relative flex items-center justify-center c-space section-spacing min-h-screen overflow-hidden"
+    >
+      <Particles className="absolute inset-0 -z-10" quantity={120} ease={80} color="#ffffff" refresh />
+
+      <div className="absolute inset-0 pointer-events-none -z-10 flex items-center justify-center">
+        <div
+          className="w-full max-w-[40rem] aspect-square rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(92,51,204,0.12) 0%, transparent 65%)" }}
+        />
+      </div>
+
+      <div className="w-full max-w-2xl text-center space-y-10">
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="space-y-4"
+        >
+          <p className="text-white/40 text-sm font-semibold uppercase tracking-widest">
+            Get in touch
           </p>
-        </div>
-        <form className="w-full" onSubmit={handleSubmit}>
-          <div className="mb-5">
-            <label htmlFor="name" className="field-label">
-              Full Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              className="field-input field-input-focus"
-              placeholder="Your Name"
-              autoComplete="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <label htmlFor="email" className="field-label">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              className="field-input field-input-focus"
-              placeholder="example@gmail.com"
-              autoComplete="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <label htmlFor="message" className="field-label">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4} 
-              className="field-input field-input-focus"
-              placeholder="Share your thoughts..."
-              autoComplete="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+          <h2 className="text-heading leading-tight">
+            Let&apos;s create<br />
+            <span style={{
+              background: "linear-gradient(90deg, #7a57db, #a78bfa)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}>
+              something great
+            </span>
+          </h2>
+          <p className="text-neutral-400 text-base max-w-md mx-auto leading-relaxed">
+            Have a product idea, a partnership in mind, or just want to connect?
+            The inbox is always open.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+        >
+          <a
+            href="mailto:support@solvinme.com"
+            className="group inline-flex items-center gap-2 px-5 py-4 md:px-8 rounded-2xl text-white font-semibold text-sm md:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl max-w-full"
+            style={{
+              background: "radial-gradient(circle at 40% 40%, #7a57db, #5c33cc)",
+              boxShadow: "0 0 40px rgba(92,51,204,0.35)",
+              wordBreak: "break-all",
+            }}
           >
-            {!isLoading ? "Send" : "Sending..."}
-          </button>
-        </form>
+            <Mail className="w-5 h-5 shrink-0" />
+            <span>support@solvinme.com</span>
+            <ArrowUpRight className="w-4 h-4 opacity-60 group-hover:opacity-100 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="flex items-center gap-4 justify-center"
+        >
+          <div className="h-px w-16 bg-white/10" />
+          <span className="text-white/30 text-xs uppercase tracking-widest">or find me on</span>
+          <div className="h-px w-16 bg-white/10" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-3"
+        >
+          {SOCIALS.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-white/60 hover:text-white border border-white/10 hover:border-white/25 bg-white/5 hover:bg-white/10 transition-all duration-200 hover:-translate-y-0.5"
+            >
+              {s.icon}
+              {s.label}
+            </a>
+          ))}
+        </motion.div>
+
       </div>
     </section>
   );
