@@ -1,8 +1,11 @@
 "use client";
 
+import {  useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 const ParralaxBackground = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll();
   const x = useSpring(scrollYProgress, { damping: 50 });
   const mountain3Y = useTransform(x, [0, 0.5], ["0%", "70%"]);
@@ -12,8 +15,7 @@ const ParralaxBackground = () => {
 
   return (
     <section className="absolute inset-0 bg-black/40">
-      {/* Hapus overflow-y-hidden — itu yang memotong background image di desktop */}
-      <div className="relative h-screen">
+      <div ref={containerRef} className="relative h-screen">
         <div
           className="absolute inset-0 w-full h-screen -z-50"
           style={{
